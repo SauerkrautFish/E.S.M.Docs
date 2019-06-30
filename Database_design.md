@@ -1,0 +1,112 @@
+# 模型信息
+
+1. 模型名称：Customer
+   - 属性：
+     - user(关联字段，关联Django Auth模块自带的User模型，一对一关系，在注册及登录时可以直接调用内置User自带create_user方法创建Customer)
+     - name(字符串，姓名)
+     - email(字符串，邮箱)
+     - company(字符串，公司名称)
+     - address(字符串，地址)
+     - mobile(字符串，移动电话)
+     - phone(字符串，固定电话)
+     - qq(字符串，qq号)
+     - wechat(字符串，微信号)
+     - web(字符串，网站地址)
+     - industry(字符串，行业)
+     - description(文本类型，客户描述)
+2. 模型名称：Questionnaire
+   - 属性：
+     - customer(关联字段，外键，在Questionnaire库中会自动创建名为 customer_id的字段，自动关联Customer表中的id字段，Customer与Questionnaire为一对多关系，客户信息)
+     - title(字符串，标题)
+     - create_date(日期类型，发布日期)
+     - deadline(日期类型，截止日期)
+     - quantity(整数类型，发布数量)
+     - free_count(整数类型，可用问卷数量)
+     - state(整数类型，问卷状态，0=草稿，1=待审核，2=审核失败，3=审核通过，4=已发布)
+     - type(字符串，问卷类型)
+3. 模型名称：Question
+   - 属性：
+     - questionnaire(关联字段，外键，在Question库中会自动创建名为questionnaire_id的字段，自动关联Questionnaire表中的id字段，Questionnaire与Question为一对多关系，问卷信息，当删除数据时，与之关联的数据也会删除)
+     - title(字符串，题目标题)
+     - index(整数类型，题目序号)
+     - category(字符串，判断是否多选)
+     - required_question(布尔类型，判断是否必答)
+4. 模型名称：QuestionItem
+   - 属性：
+     - question(关联字段，外键，在QuestionItem库中会自动创建名为Question_id的字段，自动关联Question表中的id字段，Question与QuestionItem为一对多关系，题目信息，当删除数据时，与之关联的数据也会删除)
+     - content(字符串，选项内容)
+     - order_number(整数类型，选项序号)
+5. 模型名称：Wallet
+   - 属性：
+     - customer(关联字段，自动关联Customer表中的id字段，Customer与Wallet为一对一关系，客户信息，当删除数据时，与之关联的数据也会删除)
+     - balance(浮点类型，钱包余额)
+6. 模型名称：WalletOutflow
+   - 属性：
+     - wallet(关联字段，外键，在WalletOutflow库中会自动创建名为Wallet_id的字段，自动关联Wallet表中的id字段，Wallet与WalletOutflow为一对多关系，钱包信息，当删除数据时，与之关联的数据也会删除)
+     - create_date(日期类型，交易时间)
+     - amount(浮点类型，交易金额)
+     - consume_state(布尔类型，判断是否支付)
+     - serial_number(字符串，流水号)
+7. 模型名称：WalletInflow
+   - 属性：
+     - wallet(关联字段，外键，在WalletInflow库中会自动创建名为Wallet_id的字段，自动关联Wallet表中的id字段，Wallet与WalletInflow为一对多关系，钱包信息，当删除数据时，与之关联的数据也会删除)
+     - create_date(日期类型，交易时间)
+     - amount(浮点类型，交易金额)
+     - consume_state(布尔类型，判断是否支付)
+     - recharge_type(字符串，交易方式)
+     - recharge_id(字符串，充值记录)
+     - serial_number(字符串，流水号)
+8. 模型名称：Administrator
+   - 属性：
+     - name(字符串，用户名称)
+     - password(字符串，管理员密码)
+9. 模型名称：QuestionnaireCheck
+   - 属性：
+     - questionnaire(关联字段，外键，在QuestionnaireCheck库中会自动创建名为questionnaire_id的字段，自动关联Questionnaire表中的id字段，Questionnaire与QuestionnaireCheck为一对多关系，问卷信息，当删除数据时，与之关联的数据也会删除)
+     - administrator(关联字段，外键，在QuestionnaireCheck库中会自动创建名为Administrator_id的字段，自动关联Administrator表中的id字段，Administrator与QuestionnaireCheck为一对多关系，管理员信息，当删除数据时，与之关联的数据也会删除)
+     - create_date(日期类型，审核时间)
+     - comment(文本类型，审核批注)
+10. 模型名称：UserInfo
+    - 属性：
+      - user(关联字段，关联Django Auth模块自带的User模型，一对一关系，在注册及登录时可以直接调用内置User自带create_user方法创建用户)
+      - name(字符串，姓名)
+      - age(整数类型，年龄)
+      - sex(布尔类型，判断性别)
+      - phone(字符串，移动电话)
+      - email(字符串，邮箱)
+      - address(字符串，地址)
+      - birthday(日期类型，出生日期)
+      - qq(字符串，qq号)
+      - wechat(字符串，微信号)
+      - job(字符串，职业)
+      - hobby(字符串，兴趣爱好)
+      - salary(字符串，收入水平)
+11. 模型名称：Point
+    - 属性：
+      - userinfo(关联字段，自动关联UserInfo表中的id字段，UserInfo与Point为一对一关系，用户信息，当删除数据时，与之关联的数据也会删除)
+      - balance(整数类型，剩余积分)
+12. 模型名称：GetPoint
+    - 属性：
+      - point(关联字段，外键，在GetPoint库中会自动创建名为Point_id的字段，自动关联Point表中的id字段，Point与GetPoint为一对多关系，积分信息，当删除数据时，与之关联的数据也会删除)
+      - amount(整数类型，积分值)
+      - create_date(日期类型，积分获取时间)
+      - reason(字符串，获取原因)
+13. 模型名称：UsePoint
+    - 属性：
+      - pointt(关联字段，外键，在UsePoint库中会自动创建名为Point_id的字段，自动关联Point表中的id字段，Point与UsePoint为一对多关系，积分信息，当删除数据时，与之关联的数据也会删除)
+      - amount(整数类型，积分值)
+      - create_date(日期类型，积分使用时间)
+      - reason(字符串，使用原因)
+14. 模型名称：Answer
+    - 属性：
+      - userinfo(关联字段，外键，在Answer库中会自动创建名为Userinfo_id的字段，自动关联Userinfo表中的id字段，Userinfo与Answer为一对多关系，用户信息，当删除数据时，与之关联的数据也会删除)
+      - questionnaire(关联字段，外键，在Answer库中会自动创建名为Questionnaire_id的字段，自动关联Questionnaire表中的id字段，Questionnaire与Answer为一对多关系，问卷信息，当删除数据时，与之关联的数据也会删除)
+      - create_date(日期类型，参与问卷日期)
+      - is_done(布尔类型，判断是否完成)
+15. 模型名称：AnswerItem
+    - 属性：
+      - userinfo(关联字段，外键，在AnswerItem库中会自动创建名为Userinfo_id的字段，自动关联Userinfo表中的id字段，Userinfo与AnswerItem为一对多关系，用户信息，当删除数据时，与之关联的数据也会删除)
+      - item(关联字段，外键，在AnswerItem库中会自动创建名为QuestionItem_id的字段，自动关联QuestionItem表中的id字段，QuestionItem与AnswerItem为一对多关系，题目选项信息，当删除数据时，与之关联的数据也会删除)
+      
+# ER模型图
+![ER模型图](https://github.com/SauerkrautFish/E.S.M.Docs/blob/master/image/ER%E6%A8%A1%E5%9E%8B%E5%9B%BE.png)
