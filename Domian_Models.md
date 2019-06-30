@@ -1,2 +1,2 @@
 # 领域模型
-![领域模型](https://github.com/SauerkrautFish/E.S.M.Docs/blob/master/image/domain.png?raw=true)
+![domain.png](https://i.loli.net/2019/06/30/5d18dad4977b698573.png)
