@@ -25,7 +25,8 @@
 	- 9.1 [成品展示](productDetail.md)
 
 - X1 meeting-records
-	- inception meeting (yy/mm/dd)
+	- [启动会议](Meeting_report/2019-6-17.md)
+	- [人员分配会议](Meeting_report/2019-6-18.md)
 - X2 KANBAN
 - X3 auditing-records
 - X4 Tech/Work Report
