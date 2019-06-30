@@ -31,5 +31,5 @@
 - X3 auditing-records
 - X4 Tech/Work Report
 - X5 Final Report
-	- pineapple(16340266yanming.md)
+	- [pineapple](16340266yanming.md)
 - [小组分工与贡献率说明](小组分工与贡献率说明.md)
