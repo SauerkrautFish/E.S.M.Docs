@@ -4,6 +4,7 @@
 :--:|:-------:|:--:|:-----: 
 v1.0|2019-6-19|初步分工|Koishi
 v1.1|2019-6-30|遗漏信息补充|Koishi
+v1.2|2019-6-30|信息修改|Koishi
 
 ## 1、团队故事
 
@@ -15,7 +16,7 @@ v1.1|2019-6-30|遗漏信息补充|Koishi
 |:--:|:--:|:--:|:--:|
 |16340281|Alkaid|[Alkaid](https://github.com/Alkaid128)|数据库DBA、python工程师|
 |16340267|Koishi|[BounceIf](https://github.com/BounceIf)|项目经理、python工程师|
-|16340266|pineapple|[pineappleym](https://github.com/pineappleym)|UI/UX设计师、js工程师|
+|16340266|pineapple|[yanmingsysu](https://github.com/yanmingsysu)|UI/UX设计师、js工程师|
 |16340270|Kakaa|[yangj295](https://github.com/yangj295)|产品经理、js工程师|
 |16340268|yhao|[yhao1886](https://github.com/yhao1886)|js工程师|
 |16340272|Ywwwater|[Miao Yang](https://github.com/ywwwater)|技术经理、python工程师|
