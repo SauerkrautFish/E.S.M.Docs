@@ -109,4 +109,4 @@
       - item(关联字段，外键，在AnswerItem库中会自动创建名为QuestionItem_id的字段，自动关联QuestionItem表中的id字段，QuestionItem与AnswerItem为一对多关系，题目选项信息，当删除数据时，与之关联的数据也会删除)
       
 # ER模型图
-![ER模型图](https://github.com/SauerkrautFish/E.S.M.Docs/blob/master/image/ER%E6%A8%A1%E5%9E%8B%E5%9B%BE.png)
+![ER模型图](https://github.com/SauerkrautFish/E.S.M.Docs/blob/master/image/ER.png?raw=true)
