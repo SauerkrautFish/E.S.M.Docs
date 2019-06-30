@@ -23,7 +23,7 @@
 	- 8.3 [架构设计、详细设计（BCE方法）到应用程序框架映射指南](8.3逻辑架构到应用程序映射指南.md)
 	- 8.4 [部署说明](物理架构云上部署 dock-compose.yml 文件编写与使用.md)
 - 9、 成品展示
-	- 9.1 
+	- 9.1 [成品展示](productDetail.md)
 
 - X1 meeting-records
 	- inception meeting (yy/mm/dd)
