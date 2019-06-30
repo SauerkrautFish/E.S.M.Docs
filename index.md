@@ -15,7 +15,7 @@
 	- 7.1 [UI design](UI_design.md)（界面设计）
 	- 7.2 [Database design](Database_design.md)（数据库设计）
 	- 7.3 [Interface API design](InterfaceAPI_design.md)（接口 API 设计）
-	- 7.4 Architecture design（架构设计）
+	- 7.4 [Architecture design](Architecture_design.md)（架构设计）
 	- 7.5 [Usecase design](Usecase_design.md)（用例设计）
 - 8、 生产规范与指南
 	- 8.1 [代码规范](生产规范与指南.md)
