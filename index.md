@@ -31,6 +31,7 @@
 - X3 auditing-records
 - X4 Tech/Work Report
 	- [16340272yangmiao](16340272yangmiao_mac环境下django的安装.md)
+	- [16340268yhao](16340268yhao.md)
 - X5 Final Report
 	- [16340266_yanmingsysu](16340266yanming.md)
 	- [16340272_ywwwater](16340272yangmiao.md)
